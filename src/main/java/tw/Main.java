@@ -7,12 +7,14 @@ import tw.commands.GuessInputCommand;
  */
 public class Main {
 
-    private static final int RUN_TIMES = 6;
+	private static final int RUN_TIMES = 6;
 
-    public static void main(String[] args) throws Exception {
-        for (int i = 0; i < RUN_TIMES; i++) {
-            String input = new GuessInputCommand().input();
-            System.out.println(input);
-        }
-    }
+	public static void main(String[] args) throws Exception {
+		
+		for (int i = 0; i < RUN_TIMES; i++) {
+			String input = new GuessInputCommand().input();
+			Game.playGame(input);
+		}
+		System.out.println("游戏结束！");
+	}
 }
